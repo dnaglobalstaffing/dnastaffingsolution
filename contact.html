@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <title>Contact Us | DNA Global Staffing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ================= NAVBAR ================= -->
   <header class="navbar">
     <div class="nav-container">
       <div class="logo">DNA Global Staffing</div>
@@ -28,16 +30,16 @@
     </div>
   </header>
 
-  <!-- PAGE HEADER -->
+  <!-- ================= PAGE HEADER ================= -->
   <section class="page-header">
     <h1>Contact Us</h1>
     <p>Professional healthcare staffing & patient support services</p>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- ================= CONTACT SECTION ================= -->
   <section class="contact-wrapper">
 
-    <!-- LEFT INFO -->
+    <!-- -------- LEFT INFO -------- -->
     <div class="contact-info">
       <h2>Get in Touch</h2>
 
@@ -68,27 +70,40 @@
       </div>
     </div>
 
-    <!-- RIGHT FORM -->
+    <!-- -------- RIGHT FORM -------- -->
     <div class="contact-form-box">
       <h2>Request a Service</h2>
 
-      <!-- VERCEL + RESEND FORM -->
+      <!-- ===== VERCEL + RESEND FORM ===== -->
       <form action="/api/contact" method="POST">
 
+        <!-- FULL NAME -->
         <input
           type="text"
           name="name"
           placeholder="Full Name"
+          minlength="2"
           required
         />
 
+        <!-- EMAIL (OPTIONAL BUT VALID) -->
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address (optional)"
+        />
+
+        <!-- PHONE WITH COUNTRY CODE -->
         <input
           type="tel"
           name="phone"
-          placeholder="Mobile Number"
+          placeholder="+447438821200"
+          pattern="^\+[1-9]\d{7,14}$"
+          title="Use country code, e.g. +447438821200"
           required
         />
 
+        <!-- SERVICE -->
         <select name="service" required>
           <option value="">Select Healthcare Service</option>
           <option>Home Healthcare</option>
@@ -97,6 +112,7 @@
           <option>Child & Pediatric Care</option>
         </select>
 
+        <!-- LOCATION -->
         <input
           type="text"
           name="location"
@@ -104,12 +120,14 @@
           required
         />
 
+        <!-- MESSAGE -->
         <textarea
           name="message"
           rows="4"
           placeholder="Additional details (optional)">
         </textarea>
 
+        <!-- SUBMIT -->
         <button type="submit" class="btn-primary full">
           Submit Request
         </button>
@@ -119,7 +137,7 @@
 
   </section>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
+  <!-- ================= WHATSAPP FLOAT ================= -->
   <a
     href="https://wa.me/447438821200"
     class="whatsapp-float"
@@ -128,11 +146,12 @@
     WhatsApp
   </a>
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <p>© 2026 DNA Global Staffing. All rights reserved.</p>
   </footer>
 
+  <!-- JS -->
   <script src="js/main.js"></script>
 </body>
 </html>

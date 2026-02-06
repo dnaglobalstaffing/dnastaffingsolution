@@ -43,9 +43,12 @@ export default async function handler(req, res) {
     const result = await response.json();
 
     if (!response.ok) {
-      console.error("Resend API error:", result);
-      return res.status(500).send("Email send failed");
-    }
+  console.error("Resend API error:", result);
+  return res.status(500).send(
+    "Resend error: " + JSON.stringify(result)
+  );
+}
+
 
     /* ---------- SUCCESS ---------- */
     res.status(302).setHeader("Location", "/contact.html");

@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    /* ---------- READ FORM DATA ---------- */
+    // ---------- READ FORM DATA ----------
     let body = "";
     for await (const chunk of req) {
       body += chunk.toString();
@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     const location = params.get("location");
     const message = params.get("message") || "N/A";
 
-    /* ---------- SEND EMAIL VIA RESEND API ---------- */
+    // ---------- SEND EMAIL VIA RESEND API ----------
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: "DNA Global Staffing <onboarding@resend.dev>",
-        to: ["dnaglobalstaffing@googlegroups.com"],
+        to: ["dnaglobalstaffing@gmail.com"], // test first
         subject: "New Service Request - DNA Global Staffing",
         html: `
           <h2>New Service Request</h2>
@@ -43,14 +43,11 @@ export default async function handler(req, res) {
     const result = await response.json();
 
     if (!response.ok) {
-  console.error("Resend API error:", result);
-  return res.status(500).send(
-    "Resend error: " + JSON.stringify(result)
-  );
-}
+      console.error("Resend API error:", result);
+      return res.status(500).send(JSON.stringify(result));
+    }
 
-
-    /* ---------- SUCCESS ---------- */
+    // ---------- SUCCESS ----------
     res.status(302).setHeader("Location", "/contact.html");
     res.end();
 

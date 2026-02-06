@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | DNA Global Staffing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">DNA Global Staffing</div>
+      <nav class="nav-menu">
+  <a href="/">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Contact Us</h1>
+    <p>We are here to help you with reliable home staffing services.</p>
+  </section>
+
+  <!-- CONTACT WRAPPER -->
+  <section class="contact-wrapper">
+
+    <!-- LEFT INFO -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+
+      <p><strong>📞 Phone:</strong><br> +44 7438 821200</p>
+
+      <p><strong>📧 Email:</strong><br> dnaglobalstaffing@gmail.com</p>
+
+      <p><strong>📍 Address:</strong><br>
+        Janakpur Dham, Nepal
+      </p>
+
+      <!-- MAP -->
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=London%2C%20United%20Kingdom&output=embed"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form-box">
+      <h2>Request a Service</h2>
+
+      <form action="/request-service" method="POST">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="tel" name="phone" placeholder="Mobile Number" required>
+
+        <select name="service" required>
+          <option value="">Select Service</option>
+          <option>Home Services</option>
+          <option>Patient Care</option>
+          <option>Elder Care</option>
+          <option>Babysitter</option>
+        </select>
+
+        <input type="text" name="location" placeholder="Your Location" required>
+
+        <textarea name="message" rows="4" placeholder="Message (optional)"></textarea>
+
+        <button type="submit" class="btn-primary full">Submit Request</button>
+
+      </form>
+    </div>
+
+  </section>
+  <!-- FLOATING WHATSAPP BUTTON -->
+<a
+  href="https://wa.me/+447438821200"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <span>WhatsApp</span>
+</a>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 DNA Global Staffing. All rights reserved.</p>
+  </footer>
+<script src="js/main.js"></script>
+
+</body>
+</html>

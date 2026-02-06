@@ -58,7 +58,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: "DNA Global Staffing <onboarding@resend.dev>",
-        to: ["dnaglobalstaffing@googlegroups.com"],
+        to: ["dnaglobalstaffing@gmail.com"],
         subject: "New Service Request - DNA Global Staffing",
         html: `
           <h2>New Healthcare Service Request</h2>

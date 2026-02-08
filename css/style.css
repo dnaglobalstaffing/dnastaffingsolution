@@ -681,3 +681,41 @@ nav a {
     font-size: 15px;
   }
 }
+
+
+
+/* SERVICE DETAIL PAGES */
+.service-hero {
+  background: linear-gradient(135deg, #2bb0ed, #1c8fc9);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.service-detail {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.service-box {
+  margin-bottom: 40px;
+}
+
+.service-box h2 {
+  color: #2bb0ed;
+  margin-bottom: 10px;
+}
+
+.service-box ul {
+  padding-left: 20px;
+}
+
+.service-box ul li {
+  margin-bottom: 8px;
+}
+
+.service-cta {
+  text-align: center;
+  margin-top: 40px;
+}
